@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Lucky</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .telegram-button {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, #1da1f2, #00c6ff);
+            color: #ffffff;
+            text-align: center;
+            padding: 18px;
+            border-radius: 16px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            margin: 12px 0;
+            box-shadow: 0 8px 20px rgba(0, 140, 255, 0.35);
+        }
+
+        .telegram-button:active {
+            transform: scale(0.97);
+        }
+
+
+        body {
+            margin: 0;
+            background: #121212;
+            color: #ffffff;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .container {
+            max-width: 420px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .header p {
+            margin: 6px 0 0;
+            color: #b0b0b0;
+            font-size: 14px;
+        }
+
+        .card {
+            background: #1c1c1c;
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 14px;
+        }
+
+        .card-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .subtext {
+            color: #b0b0b0;
+            font-size: 14px;
+        }
+
+        .value {
+            font-size: 15px;
+            margin-top: 6px;
+            word-break: break-all;
+        }
+
+        .copy-btn {
+            width: 100%;
+            margin-top: 12px;
+            padding: 12px;
+            border: none;
+            border-radius: 12px;
+            background: #257866;
+            color: #FAF9F6;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .copy-btn:active {
+            transform: scale(0.98);
+        }
+
+        .contact {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #1c1c1c;
+            border-radius: 14px;
+            padding: 14px;
+            margin-bottom: 10px;
+        }
+
+        .contact span {
+            font-size: 15px;
+        }
+
+        .telegram-button {
+            display: block;
+            width: 100%;
+            background: #0088cc;
+            color: #ffffff;
+            text-align: center;
+            padding: 16px;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            margin: 12px 0;
+        }
+
+        .telegram-button:active {
+            transform: scale(0.98);
+        }
+
+        .footer-note {
+            background: #1c1c1c;
+            border-left: 4px solid #e74c3c;
+            padding: 14px;
+            border-radius: 10px;
+            color: #b0b0b0;
+            font-size: 14px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 16px;
+            margin: 12px 0;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn img {
+            width: 22px;
+            height: 22px;
+        }
+
+        .telegram-btn {
+            background: #0088cc;
+            color: #ffffff;
+        }
+
+        .viber-btn {
+            background: #7360f2;
+            color: #ffffff;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        .viber-note {
+            text-align: center;
+            font-size: 14px;
+            color: #b0b0b0;
+            margin-top: -6px;
+            margin-bottom: 12px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            padding: 16px;
+            margin: 12px 0;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn svg {
+            width: 26px;
+            height: 26px;
+            flex-shrink: 0;
+        }
+
+        .btn-text {
+            text-align: center;
+        }
+
+        .btn-title {
+            font-size: 16px;
+        }
+
+        .btn-sub {
+            font-size: 14px;
+            opacity: 0.85;
+            margin-top: 2px;
+        }
+
+        /* VIBER */
+        .viber-btn {
+            background: #7360f2;
+            color: #ffffff;
+        }
+
+        /* АКТИВНИЙ СТАН */
+        .btn:active {
+            background: #4db8ff;
+            transform: scale(0.97);
+        }
+
+        /* СТАН "СКОПІЙОВАНО" */
+        .btn.copied {
+            background: #2ecc71 !important;
+        }
+
+        .info-btn {
+            background: #008260;
+            color: #ffffff;
+            border: 1px solid #2ecc71;
+        }
+
+        /* HOVER-ЕФЕКТ (для ПК та браузера) */
+        @media (hover: hover) {
+            .btn:hover {
+                filter: brightness(1.15);
+                transform: translateY(-1px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header">
+            <h1>Hot Lucky</h1>
+            <p>TikTok-магазин</p>
+        </div>
+
+        <!-- PAYMENT -->
+        <div class="card">
+            <div class="card-title">💎 Реквізити для оплати:</div>
+            <div class="value">ФОП Денисюк Катерина Антонівна</div>
+            <div class="subtext" style="margin-top:8px;">⬇️ Скопіюйте для оплати ⬇️</div>
+        </div>
+
+        <button class="btn info-btn" onclick="copyWithFeedback(this, 'UA753003350000000260062171707')">
+            <div class="btn-text">
+                <div class="btn-title">💳СКОПІЮВАТИ IBAN</div>
+                <div class="btn-sub">UA753003350000000260062171707</div>
+            </div>
+        </button>
+
+        <button class="btn info-btn" onclick="copyWithFeedback(this, '2717918801')">
+            <div class="btn-text">
+                <div class="btn-title">🏢СКОПІЮВАТИ ЄДРПОУ</div>
+                <div class="btn-sub">2717918801</div>
+            </div>
+        </button>
+
+        <button class="btn info-btn" onclick="copyWithFeedback(this, 'Оплата за товар')">
+            <div class="btn-text">
+                <div class="btn-title">📝СКОПІЮВАТИ ПРИЗНАЧЕННЯ</div>
+                <div class="btn-sub">Оплата за товар</div>
+            </div>
+        </button>
+
+        <!-- AFTER PAYMENT -->
+        <div class="card">
+            <div class="card-title">📦 Після оплати:</div>
+            <div class="subtext">
+                Надішліть менеджеру скріншот квитанції про успішну оплату та заповніть шаблон:
+            </div>
+
+            <button class="btn info-btn" onclick="copyWithFeedback(this,
+'👤 ПІБ:\n📍 Населений пункт:\n📦 Відділення НП:\n📱 Телефон отримувача:')">
+
+                <div class="btn-text">
+                    <div class="btn-title">🤝СКОПІЮВАТИ ШАБЛОН</div>
+                    <div class="btn-sub">
+                        👤 ПІБ<br>
+                        📍 Населений пункт<br>
+                        📦 Відділення НП<br>
+                        📱 Телефон отримувача
+                    </div>
+                </div>
+            </button>
+
+            <!-- CONTACT -->
+            <div class="card">
+                <div class="card-title">📞 Звʼязок з магазином:</div>
+
+                <!-- TELEGRAM MANAGER -->
+                <a href="https://t.me/deni_o" target="_blank" class="btn telegram-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+                    НАПИСАТИ В ТЕЛЕГРАМ
+                </a>
+
+                <!-- VIBER -->
+                <a href="viber://chat?number=%2B380732020787" target="_blank" class="btn viber-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0 0 48 48">
+                        <path fill="#fff"
+                            d="M24,5C21.361,5,13.33,5,8.89,9.054C6.246,11.688,5,15.494,5,21v3c0,5.506,1.246,9.312,3.921,11.976 c1.332,1.215,3.148,2.186,5.368,2.857L15,39.047v5.328C15,45,15.181,45,15.241,45c0.123,0,0.32-0.039,0.694-0.371 c0.09-0.089,0.75-0.803,3.96-4.399l0.324-0.363l0.485,0.031C21.779,39.965,22.888,40,24,40c2.639,0,10.67,0,15.11-4.055 C41.753,33.311,43,29.505,43,24v-3c0-5.506-1.246-9.312-3.921-11.976C34.67,5,26.639,5,24,5z">
+                        </path>
+                        <path fill="#7e57c2"
+                            d="M33.451 28.854c-1.111-.936-1.624-1.219-3.158-2.14C29.654 26.331 28.68 26 28.169 26c-.349 0-.767.267-1.023.523C26.49 27.179 26.275 28 25.125 28c-1.125 0-3.09-1.145-4.5-2.625C19.145 23.965 18 22 18 20.875c0-1.15.806-1.38 1.462-2.037C19.718 18.583 20 18.165 20 17.816c0-.511-.331-1.47-.714-2.109-.921-1.535-1.203-2.048-2.14-3.158-.317-.376-.678-.548-1.056-.549-.639-.001-1.478.316-2.046.739-.854.637-1.747 1.504-1.986 2.584-.032.147-.051.295-.057.443-.046 1.125.396 2.267.873 3.234 1.123 2.279 2.609 4.485 4.226 6.455.517.63 1.08 1.216 1.663 1.782.566.582 1.152 1.145 1.782 1.663 1.97 1.617 4.176 3.103 6.455 4.226.958.472 2.086.906 3.2.874.159-.005.318-.023.477-.058 1.08-.238 1.947-1.132 2.584-1.986.423-.568.74-1.406.739-2.046C33.999 29.532 33.827 29.171 33.451 28.854zM34 24c-.552 0-1-.448-1-1v-1c0-4.962-4.038-9-9-9-.552 0-1-.448-1-1s.448-1 1-1c6.065 0 11 4.935 11 11v1C35 23.552 34.552 24 34 24zM27.858 22c-.444 0-.85-.298-.967-.748-.274-1.051-1.094-1.872-2.141-2.142-.535-.139-.856-.684-.718-1.219.138-.534.682-.855 1.219-.718 1.748.453 3.118 1.822 3.575 3.574.139.535-.181 1.08-.715 1.22C28.026 21.989 27.941 22 27.858 22z">
+                        </path>
+                        <path fill="#7e57c2"
+                            d="M31,23c-0.552,0-1-0.448-1-1c0-3.188-2.494-5.818-5.678-5.986c-0.552-0.029-0.975-0.5-0.946-1.051 c0.029-0.552,0.508-0.976,1.051-0.946C28.674,14.241,32,17.748,32,22C32,22.552,31.552,23,31,23z">
+                        </path>
+                        <path fill="#7e57c2"
+                            d="M24,4C19.5,4,12.488,4.414,8.216,8.316C5.196,11.323,4,15.541,4,21c0,0.452-0.002,0.956,0.002,1.5 C3.998,23.043,4,23.547,4,23.999c0,5.459,1.196,9.677,4.216,12.684c1.626,1.485,3.654,2.462,5.784,3.106v4.586 C14,45.971,15.049,46,15.241,46h0.009c0.494-0.002,0.921-0.244,1.349-0.624c0.161-0.143,2.02-2.215,4.042-4.481 C21.845,40.972,22.989,41,23.999,41c0,0,0,0,0,0s0,0,0,0c4.5,0,11.511-0.415,15.784-4.317c3.019-3.006,4.216-7.225,4.216-12.684 c0-0.452,0.002-0.956-0.002-1.5c0.004-0.544,0.002-1.047,0.002-1.5c0-5.459-1.196-9.677-4.216-12.684C35.511,4.414,28.5,4,24,4z M41,23.651l0,0.348c0,4.906-1.045,8.249-3.286,10.512C33.832,38,26.437,38,23.999,38c-0.742,0-1.946-0.001-3.367-0.1 C20.237,38.344,16,43.083,16,43.083V37.22c-2.104-0.505-4.183-1.333-5.714-2.708C8.045,32.248,7,28.905,7,23.999l0-0.348 c0-0.351-0.001-0.73,0.002-1.173C6.999,22.078,6.999,21.7,7,21.348L7,21c0-4.906,1.045-8.249,3.286-10.512 C14.167,6.999,21.563,6.999,24,6.999c2.437,0,9.832,0,13.713,3.489c2.242,2.263,3.286,5.606,3.286,10.512l0,0.348 c0,0.351,0.001,0.73-0.002,1.173C41,22.922,41,23.3,41,23.651z">
+                        </path>
+                    </svg>
+                    <div class="btn-text">
+                        <div class="btn-title">НАПИСАТИ В VIBER</div>
+                    </div>
+                </a>
+
+                <!-- CONTACTS -->
+                <div class="card" style="background: #2a2a2a; text-align: center;">
+                    <div class="card-title">📱 Контакти</div>
+                    <button class="copy-btn" style="margin-top: 8px;" onclick="copyWithFeedback(this, '+380995002470')">
+                        +380995002470
+                    </button>
+                    <button class="copy-btn" onclick="copyWithFeedback(this, '+380732020787')">
+                        +380732020787
+                    </button>
+                </div>
+            </div>
+
+            <!-- TIKTOK NOTE -->
+            <div class="footer-note">
+                Для користувачів TikTok:
+                якщо кнопки «Відкрити» або «Скопіювати» не працюють —
+                натисніть три крапки вгорі праворуч → «Відкрити в браузері», або звертайтесь за телефоном.
+            </div>
+
+        </div>
+
+        <script>
+            function copyWithFeedback(button, text) {
+                navigator.clipboard.writeText(text);
+
+                const originalHTML = button.innerHTML;
+                button.classList.add('copied');
+                button.innerHTML = 'Скопійовано ✓';
+
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.classList.remove('copied');
+                }, 1500);
+            }
+        </script>
+
+</body>
+
+</html>
